@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Bookmarks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div aria-label="Error notification" class="error-container"></div>
+    <h1>My Bookmarks</h1>
+
+    
+    <form aria-label="Add a bookmark" id="js-bookmark-add" class="js-bookmark-add">
+      <button type="submit" class="js-bookmark-add" tabindex="0">Add Bookmark</button>
+    </form>
+    
+    <form aria-label="Filter by minimum rating or show all" id="bookmark-min-rating" class="js-bookmark-min-rating">
+      <label for="bookmark-min-rating">Filter by Rating:</label>
+      <input type="radio" name="min-rating" class="js-bookmark-min-rating-select" value=1>1
+      <input type="radio" name="min-rating" class="js-bookmark-min-rating-select" value=2>2
+      <input type="radio" name="min-rating" class="js-bookmark-min-rating-select" value=3>3
+      <input type="radio" name="min-rating" class="js-bookmark-min-rating-select" value=4>4
+      <input type="radio" name="min-rating" class="js-bookmark-min-rating-select" value=5>5
+      <input type="radio" name="min-rating" class="js-bookmark-min-rating-select" value=null>Show All
+    </form> 
+    
+    <form aria-label="Add a bookmark form" id="js-bookmark-add-form">
+      <label for="bookmark-title-entry">Title:</label>
+      <input type="text" id="bookmark-title-entry" class="js-bookmark-title-entry">
+      <br>
+      <label for="bookmark-url-entry">URL:</label>
+      <input type="url" id="bookmark-url-entry" class="js-bookmark-url-entry" placeholder="https://www.thinkful.com">
+      <br>
+      <label for="bookmark-desc-entry">Description:</label>
+      <input type="text" id="bookmark-desc-entry" class="js-bookmark-desc-entry">
+      <br>
+      <label for="bookmark-rating-entry">Rating (1-5):</label>
+      <input type="number" id="bookmark-rating-entry" class="js-bookmark-rating-entry" min="1" max="5">
+      <br>
+      <button type="button" class="bookmark-cancel-add js-bookmark-cancel-add">Cancel</button>
+      <button type="reset">Clear</button>
+      <button type="submit">Add item</button>
+    </form>
+      
+    <ul class="bookmark-list js-bookmark-list">
+      <h2>Bookmark List</h2>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="scripts/api.js"></script>
+  <script type="text/javascript" src="scripts/store.js"></script>
+  <script type="text/javascript" src="scripts/bookmark-list.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+
+</body>
+</html>
